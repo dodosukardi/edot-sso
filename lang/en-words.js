@@ -9,4 +9,7 @@ module.exports = {
   login: "Login",
   next: "Next",
   cancel: "Cancel",
+  helps: "Helps",
+  privacy: "Privacy Policy",
+  terms: "Terms and Conditions",
 };

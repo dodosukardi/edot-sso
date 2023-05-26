@@ -9,4 +9,7 @@ module.exports = {
   login: "Masuk",
   next: "Selanjutnya",
   cancel: "Batal",
+  helps: "Bantuan",
+  privacy: "Kebijakan Privasi",
+  terms: "Syarat dan Ketentuan",
 };
