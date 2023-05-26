@@ -1,0 +1,58 @@
+<%- include('./partials/header'); %>
+<div class="auth-wrapper">
+  <div class="container">
+    <div class="card">
+      <div class="login-header">
+        <img alt="edot" src="/static/images/edot-logo.svg">
+        <h2 class="header-title mt-24"><%= words.loginTitle %></h2>
+        <div class="login-redirect"><%= words.dontHaveAccount %> <a href="#"><%= words.register %></a></div>
+      </div>
+
+      <form action="/<%= words.path %>/prompt">
+        <div class="input-group">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label><%= words.labelUsername %></label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label><%= words.labelPassword %></label>
+        </div>
+
+        <% if (withCaptcha) { %>
+        <div class="captcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="<%= sitekey %>" data-callback="recaptchaCallback"></div>
+        </div>
+        <% } %>
+
+        <div class="forgot-link">
+          <a href="#"><%= words.forgotPassword %></a>
+        </div>
+        <button
+          id="submit"
+          type="submit"
+          class="button mt-24"
+          <% if (withCaptcha) { %>disabled<% } %>
+        >
+          <%= words.login %>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer >
+  <%- include('./partials/footer'); %>
+</footer>
+
+<script type="text/javascript">
+  function recaptchaCallback() {
+    document.getElementById('submit').removeAttribute('disabled');
+  }
+</script>
+</body>
+</html>

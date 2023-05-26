@@ -1,0 +1,40 @@
+<%- include('./partials/header'); %>
+
+<div class="auth-wrapper">
+  <div class="container">
+    <div class="card">
+      <div class="login-header">
+        <img alt="edot" src="/static/images/edot-logo.svg">
+        <h2 class="header-title mt-24">Prompt Page</h2>
+      </div>
+
+      <div class="mt-8">
+        <p><b>Point number one</b></p>
+        <p class="point-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul class="point-desc">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        </ul>
+      </div>
+
+      <div class="mt-24">
+        <p><b>Point number two</b></p>
+        <p class="point-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul class="point-desc">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        </ul>
+      </div>
+
+      <button type="button" class="button mt-24"><%= words.next %></button>
+      <a href="/en/login">
+        <button type="button" class="button button-light mt-8"><%= words.cancel %></button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer >
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>
